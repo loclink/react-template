@@ -1,0 +1,30 @@
+.pageContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  .contentWrapper {
+    height: 100%;
+    overflow: hidden;
+    .content {
+      height: 100%;
+    }
+  }
+
+  .pageContentFooter {
+    flex-shrink: 0;
+  }
+
+  .tabbarSpace {
+    width: 100%;
+    height: var(--nutui-tabbar-height);
+    flex-shrink: 0;
+  }
+
+  .safeArea {
+    height: env(safe-area-inset-bottom);
+    flex-shrink: 0;
+  }
+}

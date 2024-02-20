@@ -1,0 +1,14 @@
+.recordTabs {
+  .nut-tabpane {
+    padding: 20rpx 20rpx;
+  }
+
+  .nut-grid-item-content-border {
+    border-width: 6rpx;
+    border-radius: 50rpx;
+  }
+
+  .active .nut-grid-item-content-border {
+    border-color: var(--nutui-color-primary);
+  }
+}

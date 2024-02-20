@@ -1,0 +1,41 @@
+{
+  "name": "taro-plugin-spanner",
+  "version": "0.0.4",
+  "description": "",
+  "keywords": [
+    "Taro",
+    "Plugin"
+  ],
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "main": "index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "index.js",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "release": "dotenv release-it"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "@tarojs/service": "^3.6.18",
+    "taro-plugin-auto-path": "workspace:*",
+    "taro-plugin-creator": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^5.1.0"
+  },
+  "devDependencies": {
+  }
+}

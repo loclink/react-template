@@ -1,0 +1,43 @@
+{
+  "name": "taro-plugin-router-next",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "Taro",
+    "Plugin"
+  ],
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "main": "index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "index.js",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "bugs": {},
+  "dependencies": {
+    "@tarojs/helper": "^3.6.17",
+    "@tarojs/service": "^3.6.18",
+    "fs-extra": "^11.1.1",
+    "ts-morph": "^20.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^18.13.0",
+    "webpack": "^5.89.0",
+    "webpack-chain": "^6.5.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.1.0"
+  }
+}

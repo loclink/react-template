@@ -1,0 +1,12 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:taro": "pnpm --dir packages/taro-template run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

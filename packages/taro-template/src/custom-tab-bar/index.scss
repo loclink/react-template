@@ -1,0 +1,13 @@
+.customTabbarWrapper {
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: none;
+
+  .tabbarItemIcon::before {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  .tabbarItem {
+    position: relative;
+  }
+}

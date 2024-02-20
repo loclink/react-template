@@ -1,0 +1,14 @@
+{
+  "name": "taro-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@tarojs/taro": "3.6.18"
+  }
+}

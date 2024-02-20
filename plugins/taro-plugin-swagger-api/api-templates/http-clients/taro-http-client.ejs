@@ -1,0 +1,7 @@
+<%
+const { apiConfig, generateResponses, config } = it;
+%>
+
+import TaroRequest, { ITaroRequestConfig } from 'taro-request';
+
+type RequestParams = Omit<ITaroRequestConfig, 'url'>;

@@ -1,0 +1,4 @@
+{
+  "autoRestart.fileGlobForTypescript": "**/node_modules/.tarojs-router-next",
+  "autoRestart.showRestartNotificationForTypescript": false
+}
