@@ -15,6 +15,12 @@ const Component: React.FC = () => {
     <>
       <Tabbar
         className='customTabbarWrapper'
+        safeArea
+        style={
+          {
+            '--nutui-tabbar-height': `${config.tabbarHeight}rpx`
+          } as any
+        }
         defaultValue={0}
         value={currentIndex}
         onSwitch={(value) => {

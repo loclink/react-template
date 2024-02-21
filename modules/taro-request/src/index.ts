@@ -106,7 +106,7 @@ export async function takeTokenRequestInterceptor(
 
   // 静默授权
   if (!token && silentAuthorization && !config.isSilentAuth) {
-    const data = await getToken(silentAuthorization);
+    const { data } = await getToken(silentAuthorization);
     token = data.token;
     Taro.setStorageSync('token', token);
   }

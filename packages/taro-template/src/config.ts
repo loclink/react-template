@@ -1,6 +1,7 @@
 import { AddCircle, Agenda, User } from '@nutui/icons-react-taro';
 
 export default {
+  tabbarHeight: 140,
   tabbar: [
     {
       text: '账单',
@@ -19,9 +20,7 @@ export default {
       activeIcon: '',
       iconSize: 60,
       textColor: '#1296db',
-      style: {
-        marginTop: '-20px'
-      }
+      style: {}
     },
     {
       text: '我的',

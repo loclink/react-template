@@ -9,9 +9,6 @@ const instance = new Api({
 instance.requestInterceptors.use((requestConfig) => {
   return takeTokenRequestInterceptor(requestConfig, {
     silentAuthorization: instance.weapp.authControllerSilentLogin
-  }).then((res) => {
-    console.log(res);
-    return res;
   });
 });
 

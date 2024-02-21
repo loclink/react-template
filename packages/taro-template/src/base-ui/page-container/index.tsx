@@ -10,12 +10,22 @@ import styles from './index.module.scss';
 import { getMenuButtonBoundingClientRect, getSystemInfoSync } from './utils';
 
 export const PageContainer = (props: PropsWithChildren<PageContainerProps>) => {
-  const { title, navBarProps, className, isSafeArea = true, isShowBackIcon = true, footer, extra } = props;
-  const isTab = !!config.tabbar.find((item) => item.pagePath?.includes(Taro.getCurrentPages()[0].route || ''));
-
+  const {
+    safeAreaColor,
+    title,
+    navBarProps,
+    className,
+    isSafeArea = true,
+    isShowBackIcon = true,
+    footer,
+    extra
+  } = props;
+  const isTab = !!config.tabbar.find((item) =>
+    item.pagePath?.includes(Taro.getCurrentPages()[Taro.getCurrentPages().length - 1].route || '')
+  );
   const handleRenderIcon = () => {
     if (isShowBackIcon && !isTab) {
-      return <ArrowLeft />;
+      return <ArrowLeft onClick={() => Taro.navigateBack()} />;
     } else {
       return null;
     }
@@ -23,7 +33,7 @@ export const PageContainer = (props: PropsWithChildren<PageContainerProps>) => {
 
   return (
     <View className={classNames([styles.pageContainerWrapper, className])}>
-      <View style={{ height: statusBarHeight, flexShrink: 0 }} />
+      <View style={{ height: statusBarHeight, flexShrink: 0, backgroundColor: '#fff' }} />
       <NavBar
         className={styles.pageContainerNavbar}
         style={{
@@ -45,8 +55,8 @@ export const PageContainer = (props: PropsWithChildren<PageContainerProps>) => {
 
       {/* <EasyScroll className="content">{props.children}</EasyScroll> */}
       <View className={styles.pageContentFooter}>{footer}</View>
-      {isTab && <View className={styles.tabbarSpace} />}
-      {isSafeArea && <View className={styles.safeArea} />}
+      {isTab && <View className={styles.tabbarSpace} style={{ height: `${config.tabbarHeight}rpx` }} />}
+      {isSafeArea && <View className={styles.safeArea} style={{ backgroundColor: safeAreaColor }} />}
       <View style={{ flexShrink: 0 }}>{extra}</View>
     </View>
   );

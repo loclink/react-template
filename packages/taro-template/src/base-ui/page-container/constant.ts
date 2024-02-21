@@ -9,4 +9,5 @@ export interface PageContainerProps extends ViewProps {
   isShowBackIcon?: boolean;
   footer?: ReactNode;
   extra?: ReactNode;
+  safeAreaColor?: string;
 }

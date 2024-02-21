@@ -31,11 +31,11 @@
   "dependencies": {
     "@tarojs/service": "^3.6.18",
     "taro-plugin-auto-path": "workspace:*",
-    "taro-plugin-creator": "workspace:*"
+    "taro-plugin-creator": "workspace:*",
+    "@tarojs/plugin-mini-ci": "3.6.18"
   },
   "peerDependencies": {
     "typescript": "^5.1.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

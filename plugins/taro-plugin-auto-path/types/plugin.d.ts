@@ -1,6 +1,6 @@
 import { IPluginContext } from '@tarojs/service';
-import { AutoPathConfig, IConfigModel } from './types';
 import { LogTypeEnum } from './constant';
+import { AutoPathConfig, IConfigModel } from './types';
 export declare class Plugin {
     readonly ctx: IPluginContext;
     readonly options: AutoPathConfig;

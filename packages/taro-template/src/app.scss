@@ -1,12 +1,10 @@
-page,
-.customTabbarWrapper {
+page {
+  background-color: #f2f4f8;
   --nutui-color-primary: #1296db;
-  --nutui-tabbar-height: 120rpx;
-
-  .nut-overlay {
-    z-index: 10000;
-  }
-  .nut-popup {
-    z-index: 10001 !important;
-  }
+}
+.nut-overlay {
+  z-index: 10000;
+}
+.nut-popup {
+  z-index: 10001 !important;
 }

@@ -1,14 +1,14 @@
-import * as path from 'path';
 import { IPluginContext } from '@tarojs/service';
-import { AutoPathConfig, IConfigModel } from './types';
+import * as path from 'path';
 import { LogTypeEnum } from './constant';
+import { AutoPathConfig, IConfigModel } from './types';
 import { generateMainPackagePaths, generateSubPackagePaths, loadAppConfig } from './utils';
 
 export class Plugin {
   appConfigModel?: IConfigModel;
 
   constructor(public readonly ctx: IPluginContext, readonly options: AutoPathConfig) {
-    this.loadConfig();
+    // this.loadConfig();
   }
 
   async loadConfig() {
@@ -34,7 +34,7 @@ export class Plugin {
 
   async autoRegister() {
     this.log(LogTypeEnum.REMIND, '开始自动注册app.config.ts');
-
+    await this.loadConfig();
     const mainPackagesPaths = await generateMainPackagePaths(this.ctx, this.options);
     const subPackagePaths = await generateSubPackagePaths(this.ctx, this.options);
     if (mainPackagesPaths.pagesPaths.length) {
