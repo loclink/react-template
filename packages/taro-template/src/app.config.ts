@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ['pages/tabbar/home/index', 'pages/tabbar/profile/index'],
+  pages: ["pages/tabbar/home/index", "pages/tabbar/profile/index"],
   window: {
     navigationStyle: 'custom',
     backgroundTextStyle: 'light',
@@ -7,15 +7,6 @@ export default defineAppConfig({
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
-  tabBar: {
-    custom: true,
-    list: [
-      { text: 'home', pagePath: 'pages/tabbar/home/index' },
-      { text: 'profile', pagePath: 'pages/tabbar/profile/index' }
-    ]
-  },
-  subPackages: [
-    { root: 'pages-sub/demo', pages: ['aaa/index', 'bbb/index'] },
-    { root: 'pages-sub/profile', pages: ['userInfo/index'] }
-  ]
+  tabBar: { "custom": true, "list": [{ "text": "home", "pagePath": "pages/tabbar/home/index" }, { "text": "profile", "pagePath": "pages/tabbar/profile/index" }] },
+  subPackages: [{ "root": "pages-sub/profile", "pages": ["userInfo/index"] }]
 });

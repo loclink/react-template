@@ -1,3 +1,4 @@
+import { AutoPathOptions } from 'taro-plugin-auto-path';
 import { CreatorOptions } from 'taro-plugin-creator';
 
 export const pluginOpts = {
@@ -38,6 +39,18 @@ export const pluginOpts = {
 };
 
 export const creatorOptions: CreatorOptions = {
+  mainPackage: {
+    rootDir: 'pages',
+    tabbarDir: 'tabbar'
+  },
+  subPackage: {
+    rootDir: 'pages-sub'
+  },
+  styleType: 'less'
+};
+
+export const autoPathOptions: AutoPathOptions = {
+  homePath: '/pages/tabbar/home/index',
   mainPackage: {
     rootDir: 'pages',
     tabbarDir: 'tabbar'

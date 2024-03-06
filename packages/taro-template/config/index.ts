@@ -1,7 +1,7 @@
 import { defineConfig, type UserConfigExport } from '@tarojs/cli';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import devConfig from './dev';
-import { creatorOptions } from './plugin.config';
+import { autoPathOptions, creatorOptions } from './plugin.config';
 import prodConfig from './prod';
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
@@ -30,8 +30,8 @@ export default defineConfig(async (merge) => {
     outputRoot: 'dist',
     plugins: [
       '@tarojs/plugin-html',
-      // 'taro-plugin-creator'
-      ['taro-plugin-creator', creatorOptions]
+      ['taro-plugin-creator', creatorOptions],
+      ['taro-plugin-auto-path', autoPathOptions]
       // ['taro-plugin-spanner', pluginOpts],
       // ['@tarojs/plugin-mini-ci', pluginOpts.CIOptions],
       // 'taro-plugin-router-next',
